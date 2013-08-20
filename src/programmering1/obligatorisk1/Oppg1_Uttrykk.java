@@ -7,4 +7,6 @@ package programmering1.obligatorisk1;
  * Time: 00:05
  */
 public class Oppg1_Uttrykk {
+
+    //test se om det kommer på git
 }
