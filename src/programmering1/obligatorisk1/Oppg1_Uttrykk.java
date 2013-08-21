@@ -13,7 +13,7 @@ public class Oppg1_Uttrykk {
         double tall2 = 2.0;
         double tall3 = 5.0;
 
-        double gjsnitt=(tall1+tall2+tall3)/3;
+        double gjsnitt=(tall1+tall2+tall3)/3;     //enkel måte å finne gjennomsnittet på
 
         System.out.println("De definerte tallverdiene er:");
         System.out.println("Tall 1 = " + tall1);
