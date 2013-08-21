@@ -1,4 +1,5 @@
 package programmering1.obligatorisk1;
+import java.util.Scanner;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,4 +8,8 @@ package programmering1.obligatorisk1;
  * Time: 00:05
  */
 public class Oppg2_UttrykkOgInnlesning {
+
+    public static void main (String [] args){
+
+    }
 }

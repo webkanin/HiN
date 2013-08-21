@@ -8,8 +8,7 @@ package programmering1.obligatorisk1;
  */
 public class Oppg1_Uttrykk {
 
-    public static void main (String[] args)
-    {
+    public static void main (String[] args){
         double tall1 = 10.0;
         double tall2 = 2.0;
         double tall3 = 5.0;
