@@ -11,12 +11,13 @@ public class Oppg4_MyntEllerKron {
 
 
     public static void main(String [] args){
-        int mynt = 0;
-        int kron = 1;
-        String valg = null;
+
+        String valg_tekst = null;   //ønsker å gi teksttilbakemelding til brukeren, måtte dermed ha par nye variabler av typen String for å få det til i IF setningene.
+        String tilfeldigtall_tekst = null;
 
         int brukervalg;
-        int tilfeldigtall = (int) (Math.random()*2);
+        int tilfeldigtall;
+        tilfeldigtall = (int) (Math.random()*2); //denne variablene får en verdi med en gang programmet har startet.
 
         Scanner sc = new Scanner(System.in);
 
@@ -28,24 +29,35 @@ public class Oppg4_MyntEllerKron {
         brukervalg = sc.nextInt();
 
         if (brukervalg==0){
-           valg = "MYNT";
+           valg_tekst = "MYNT";
         }
         else if(brukervalg==1){
-            valg = "KRON";
+            valg_tekst = "KRON";
         }
+        else {
+           valg_tekst = "ingen av delene";
+        }
+        System.out.print("Du tippet " + valg_tekst);
 
 
-
-         System.out.println(" ");
+       //programmet skriver ut resultatene nedenfor:
+        System.out.println(" ");
         System.out.println("----------------------------- ");
-         System.out.println("Programmet flipper mynten...");
-         System.out.println("Det ble " + tilfeldigtall);
+
+        if (tilfeldigtall==0){
+            tilfeldigtall_tekst = "MYNT";
+        }
+        else if(tilfeldigtall==1){
+            tilfeldigtall_tekst = "KRON";
+        }
+             System.out.println("Programmet flipper..." + tilfeldigtall_tekst);
+
 
         if (tilfeldigtall==brukervalg){
-          System.out.println("Du tippet dermed RIKTIG!");
+             System.out.println("Du tippet dermed RIKTIG!");
         }
             else {
-           System.out.println("Du har dessverre FEIL!");
+             System.out.println("Du har dessverre FEIL!");
         }
 
     }
