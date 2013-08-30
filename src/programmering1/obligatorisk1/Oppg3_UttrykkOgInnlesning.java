@@ -9,10 +9,12 @@ import java.util.Scanner;
  */
 public class Oppg3_UttrykkOgInnlesning {
 
+    static double x1, y1, x2, y2; //koordinatene til to punkt
+    static double distance;       //distansen mellom punktene
+
     public static void main (String [] args){
 
-        double x1, y1, x2, y2; //koordinatene til to punkt
-        double distance;       //distansen mellom punktene
+
 
         Scanner scan = new Scanner(System.in);
 

@@ -9,24 +9,24 @@ import java.util.Scanner;
  */
 public class Oppg4_MyntEllerKron {
 
+    static int brukervalg;
+    static int tilfeldigtall;
 
     public static void main(String [] args){
 
         String valg_tekst = null;   //ønsker å gi teksttilbakemelding til brukeren, måtte dermed ha par nye variabler av typen String for å få det til i IF setningene.
         String tilfeldigtall_tekst = null;
 
-        int brukervalg;
-        int tilfeldigtall;
         tilfeldigtall = (int) (Math.random()*2); //denne variablene får en verdi med en gang programmet har startet.
 
-        Scanner sc = new Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
 
         System.out.println("Tippeprogram 1.0");
         System.out.println("-----------------");
         System.out.println("For mynt, tast 0");
         System.out.println("For kron, tast 1");
         System.out.print("Ditt valg: ");
-        brukervalg = sc.nextInt();
+        brukervalg = scan.nextInt();
 
         if (brukervalg==0){
            valg_tekst = "MYNT";
