@@ -15,24 +15,26 @@ public class Oppg5_SjekkEtTall {
 
 
 
+    System.out.println("Divsion by 3 and 7 check | Version 1.0");
+    System.out.print("Tast inn ett tall: ");
 
-    System.out.print("Tast inn ett tall:");
 
+        Scanner scan = new Scanner(System.in);       //initialiserer Scanner objektet
 
-        divideBy3Check();
-        divideBy7Check();
+        tall=scan.nextInt();         //henter inn neste tall (av typen integer) som tastes inn.
+
+    //kaller paa de to metodene som sjekker tallene
+       divideBy3Check();
+       divideBy7Check();
 
 
     }
 
-    static void divideBy3Check(){
+    static void divideBy3Check(){     //sjekker divisjon med 3
 
         String info = null;
-        Scanner scan = new Scanner(System.in);
 
-        tall=scan.nextInt();
         if(tall%3==0){
-
             info="Tallet kan deles med 3";
         }
 
@@ -45,22 +47,18 @@ public class Oppg5_SjekkEtTall {
     }
 
 
-    static void divideBy7Check(){
+    static void divideBy7Check(){           //sjekker divisjon med 7
+
 
         String info2 = null;
-        Scanner scan = new Scanner(System.in);
 
-        tall=scan.nextInt();
         if(tall%7==0){
-
             info2="Tallet kan deles med 7";
         }
 
         else{
             info2="Tallet kan IKKE deles med 7";
         }
-
-        System.out.println(info2);
+        System.out.println(info2);     //returnerer resultatet
     }
-
 }
