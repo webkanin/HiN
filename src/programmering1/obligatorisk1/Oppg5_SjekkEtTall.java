@@ -6,6 +6,9 @@ import java.util.Scanner;      //importerer klassen som leser input
  * User: Marko
  * Date: 21.08.13
  * Time: 00:08
+ *
+ * Kommentar: Har ikke lagt inn noe sjekk for om tallet du taster inn er av typen INT.  Dersom du proever aa taste inn String eller double saa kraesjer det.
+ * Oppgaven sa ikke noe om det.
  */
 public class Oppg5_SjekkEtTall {
 
@@ -14,14 +17,12 @@ public class Oppg5_SjekkEtTall {
     public static void main(String [] args){
 
 
-
-    System.out.println("Divsion by 3 and 7 check | Version 1.0");
+    System.out.println("Division by 3 and 7 check | Version 1.0");
     System.out.print("Tast inn ett tall: ");
 
 
         Scanner scan = new Scanner(System.in);       //initialiserer Scanner objektet
-
-        tall=scan.nextInt();         //henter inn neste tall (av typen integer) som tastes inn.
+         tall=scan.nextInt();                       //henter inn neste tall (av typen integer) som tastes inn.
 
     //kaller paa de to metodene som sjekker tallene
        divideBy3Check();
@@ -42,7 +43,7 @@ public class Oppg5_SjekkEtTall {
             info="Tallet kan IKKE deles med 3";
         }
 
-        System.out.println(info);
+        System.out.println(info);     //returnerer resultatet
 
     }
 

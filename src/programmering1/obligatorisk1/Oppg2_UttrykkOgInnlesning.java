@@ -15,8 +15,8 @@ public class Oppg2_UttrykkOgInnlesning {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Du skal nå taste inn 3 tall. Programmet vil deretter finne gjennomsnittverdien:");
-        System.out.print("Velg det første tallet: ");
+        System.out.println("Du skal naa taste inn 3 tall. Programmet vil deretter finne gjennomsnittverdien:");
+        System.out.print("Velg det foerste tallet: ");
         double tall1 = sc.nextDouble();
         System.out.print("Velg det andre tallet: ");
         double tall2 = sc.nextDouble();
@@ -25,13 +25,13 @@ public class Oppg2_UttrykkOgInnlesning {
 
         double gjsnitt = (tall1 + tall2 + tall3)/3;
 
-        //kodesnuten nedenfor brukes til å runde av til 2 desimaler. Bedre å bruke BigDecimal en å bruke  "DecimalFormat" f.eks.
+        //kodesnuten nedenfor brukes til aa runde av til 2 desimaler. Bedre aa bruke BigDecimal enn aa bruke  "DecimalFormat" f.eks.
         //BigDecimal gir full kontroll på avrundingen.
 
         BigDecimal a = BigDecimal.valueOf(gjsnitt);
         BigDecimal rundetav = a.setScale(2, BigDecimal.ROUND_HALF_EVEN);   //
 
-        //resultatet må selsvagt skrives ut etterpå
+        //resultatet maa selvsagt skrives ut etterpaa
         System.out.print("Gjennomsnittet er: " + rundetav);
 
 

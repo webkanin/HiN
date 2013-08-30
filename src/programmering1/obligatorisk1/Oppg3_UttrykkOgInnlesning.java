@@ -20,7 +20,7 @@ public class Oppg3_UttrykkOgInnlesning {
 
         // Lese inn de to punktene
 
-        System.out.print ("Tast inn koordinatene til første punkt: " + "(bruk mellomrom mellom dem): ");
+        System.out.print ("Tast inn koordinatene til foerste punkt: " + "(bruk mellomrom mellom dem): ");
         x1 = scan.nextDouble();
         y1 = scan.nextDouble();
 
