@@ -7,4 +7,6 @@ package programmering1.obligatorisk1.uke2_lab;
  * Time: 23:56
  */
 public class Exercise2_12 {
+
+    //ligner for mye på de andre.
 }
