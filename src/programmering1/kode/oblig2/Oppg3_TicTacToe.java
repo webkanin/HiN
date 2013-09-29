@@ -90,8 +90,8 @@ public class Oppg3_TicTacToe {
                 brett[aktivRad][aktivKolonne] = aktivSpiller;  // update game-brett content
                 sjekkInput = true;  // dersom OK, gaa ut av loopen
             } else {
-                System.out.println("This move at (" + (row + 1) + "," + (col + 1)
-                        + ") is not valid. Try again...");
+                System.out.println("Trekket (" + (row + 1) + "," + (col + 1)
+                        + ") er ikke gyldig. Pr0v igjen...");
             }
         } while (!sjekkInput);  // fortsett loopen frem til gyldig valg tas av spiller.
     }
