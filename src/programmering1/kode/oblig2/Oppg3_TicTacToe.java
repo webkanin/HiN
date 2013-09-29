@@ -10,7 +10,7 @@ import java.util.Scanner;
 
 
 
-public class test {
+public class Oppg3_TicTacToe {
 
     // Hvert "celle" i brettet kan ha kun 3 forskjellige tilstander. Disse defineres som konstanter.
     public static final int TOMT_FELT = 0;
@@ -96,11 +96,11 @@ public class test {
         } while (!sjekkInput);  // fortsett loopen frem til gyldig valg tas av spiller.
     }
 
-    /** Update the "spillStatus" after the player with "theSeed" has placed on
-     (currentRow, aktivKolonne). */
-    public static void oppdaterSpillet(int theSeed, int currentRow, int currentCol) {
-        if (harVunnet(theSeed, currentRow, currentCol)) {  // sjekk for seier
-            spillStatus = (theSeed == KRYSS) ? KRYSS_VANT : RUNDING_VANT;
+    //Oppdaterer spillStatus etter at spilleren med aktivtTrekk har plassert verider paa aktivtRad og aktivKolonne
+
+    public static void oppdaterSpillet(int aktivTrekk, int aktivtRad, int aktivKolonne) {
+        if (harVunnet(aktivTrekk, aktivtRad, aktivKolonne)) {  // sjekk for seier
+            spillStatus = (aktivTrekk == KRYSS) ? KRYSS_VANT : RUNDING_VANT;
         } else if (erUavgjort()) {  // sjekk for tap
             spillStatus = UAVGJORT;
         }
