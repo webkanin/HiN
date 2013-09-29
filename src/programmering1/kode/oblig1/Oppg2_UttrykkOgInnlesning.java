@@ -1,4 +1,4 @@
-package programmering1.obligatorisk1;
+package programmering1.kode.oblig1;
 import java.util.Scanner;      //importerer klassen som leser input
 import java.math.BigDecimal;  //skal brukes til å runde av desimalene skikkelig.
 

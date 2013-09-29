@@ -1,4 +1,4 @@
-package programmering1.obligatorisk1;
+package programmering1.kode.oblig1;
 
 /**
  * Created with IntelliJ IDEA.

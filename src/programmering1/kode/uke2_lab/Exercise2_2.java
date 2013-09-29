@@ -1,4 +1,4 @@
-package programmering1.obligatorisk1.uke2_lab;
+package programmering1.kode.uke2_lab;
 import java.util.Scanner;
 
 
