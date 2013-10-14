@@ -1,13 +1,17 @@
 package programmering1.kode.oblig3;
-import javax.swing.JOptionPane;
 import java.util.Scanner;
 
-public class Oppg2_GuessTheCapitals
-{
-    public static void main(String[] args)
-    {
-        Scanner scan = new Scanner(System.in);
-        String[][] stateCapital = {
+/**
+ * Created with IntelliJ IDEA.
+ * User: Marko
+ * Date: 10.10.13
+ * Time: 11:56
+ */
+
+public class Oppg2_GuessTheCapitals {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);     //Scanner klassen for brukerinput
+        String[][] stateCapital = {                //Her opprettes en multidimensional array som inneholder de respektive statene og hovedstadene.
                 { "Alabama", "Montgomery" },
                 { "Alaska", "Juneau" },
                 { "Arizona", "Phoenix" },
@@ -59,21 +63,20 @@ public class Oppg2_GuessTheCapitals
                 { "Wisconsin", "Madison" },
                 { "Wyoming", "Cheyenne" } };
 
-        int correctCount = 0;
+        int correctCount = 0;   //egen variabel for aa holde tellingen. For hvert rett svar inkrementeres denne i++.
 
-        for (int i = 0; i < stateCapital.length; i++)
-        {
-            System.out.println("What is the capital of " + stateCapital[i][0] + "?");
-            String capital =  scan.next();
+        for (int i = 0; i < stateCapital.length; i++){   //traverserer gjennom arrayet
+            System.out.println("What is the capital of " + stateCapital[i][0] + "?");    //plukker ut stateCapital i rekkef0lge
+            String capital =  scan.next();          //scanner brukerinput
 
-            if (capital.toLowerCase().equals(stateCapital[i][1].toLowerCase())) {
-               System.out.println("Your answer is correct!");
-                correctCount++;
+            if (capital.toLowerCase().equals(stateCapital[i][1].toLowerCase())) {   //sammenligner brukerinput (capital) mot stateCapital fra arrayet. Begge blir gjort om til lowercase for sammenligning.
+               System.out.println("Your answer is correct!");    //gir tilbakemelding ved riktig svar
+                correctCount++;                            //0ker tellevariabelen med 1
             }
             else {
-                System.out.println("Correct answer should be " + stateCapital[i][1]);
+                System.out.println("Correct answer should be " + stateCapital[i][1]);      //forteller om hva riktig svar er. Her blir det naturligvis ingen 0kning av tellevariabelen.
             }
         }
-        System.out.println("The ammount of correct answers is " + correctCount);
+        System.out.println("The ammount of correct answers is " + correctCount);       //utskrift av tellevariabelen for aa vise score.
     }
 }
