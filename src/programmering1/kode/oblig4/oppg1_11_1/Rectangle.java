@@ -1,4 +1,4 @@
-package programmering1.kode.oblig4.oppg1_11_1;
+package programmering1.kode.oblig4.oppg1_og_oppg3;
 
 /**
  * Created with IntelliJ IDEA.
