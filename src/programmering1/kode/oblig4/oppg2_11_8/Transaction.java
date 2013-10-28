@@ -10,7 +10,7 @@ import java.util.Date;
 
 
 public class Transaction {
-    //attributes
+
     private Date date;
 
     private char type;
@@ -22,7 +22,7 @@ public class Transaction {
     private String description;
 
 
-    //Constructor
+
     public Transaction( char type, double amount, double balance, String description){
         this.date = new Date();
 

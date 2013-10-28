@@ -23,7 +23,7 @@ public class Account {
 
     private Date dateCreated;
 
-    //Recall that the ArrayList is a data structure that allows the storage of data in a relatively efficient manner.
+
     private ArrayList transactions = new ArrayList();
 
     public Account(){

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 public class TestAccount {
     public static void main( String[] args ){
 
-        //create a new account object from an existing class
+
         Account account = new Account( "George", 1122, 1000.0D);
 
         account.deposit(30.0D);
@@ -27,7 +27,7 @@ public class TestAccount {
         account.withdraw(2.0D);
 
 
-        //output the information to the user
+
 
         System.out.println( "Name:  " + account.getName() );
 
