@@ -8,11 +8,11 @@ package programmering1.kode.oblig4.oppg2_11_8;
  */
 import java.util.ArrayList;
 
-public class exercise_11_8 {
+public class TestAccount {
     public static void main( String[] args ){
 
         //create a new account object from an existing class
-        Account1 account = new Account1( "George", 1122, 1000.0D);
+        Account account = new Account( "George", 1122, 1000.0D);
 
         account.deposit(30.0D);
 
@@ -31,7 +31,7 @@ public class exercise_11_8 {
 
         System.out.println( "Name:  " + account.getName() );
 
-        System.out.println( "Annual interest rate: " + Account1.getAnnualInterestRate());
+        System.out.println( "Annual interest rate: " + Account.getAnnualInterestRate());
 
         System.out.println("Balance " + account.getBalance());
 

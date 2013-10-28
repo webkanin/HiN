@@ -9,7 +9,7 @@ package programmering1.kode.oblig4.oppg2_11_8;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Account1 {
+public class Account {
 
 
     //attributes
@@ -26,9 +26,11 @@ public class Account1 {
     //Recall that the ArrayList is a data structure that allows the storage of data in a relatively efficient manner.
     private ArrayList transactions = new ArrayList();
 
+    public Account(){
+        this.dateCreated = new Date();
+    }
 
-
-    public Account1(String name, int id, double balance){
+    public Account(String name, int id, double balance){
         this.id = id;
         this.name = name;
         this.balance = balance;
@@ -66,7 +68,9 @@ public class Account1 {
         this.balance = balance;
 
     }
-
+    public static void setAnnualInterestRate( double annualInterestRate){
+        annualInterestRate = annualInterestRate;
+    }
 
     public double getMonthlyInterest(){
         return this.balance * (annualInterestRate /1200.0D);
