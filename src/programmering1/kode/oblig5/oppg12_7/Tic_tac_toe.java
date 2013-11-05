@@ -13,8 +13,8 @@ import javax.swing.JLabel;
 
 public class Tic_tac_toe extends JFrame
 {
-    private ImageIcon cross = new ImageIcon("C:\\Users\\Webkanin\\IdeaProjects\\HiN\\src\\programmering1\\kode\\oblig5\\x.gif");
-    private ImageIcon not = new ImageIcon("C:\\Users\\Webkanin\\IdeaProjects\\HiN\\src\\programmering1\\kode\\oblig5\\o.gif");
+    private ImageIcon cross = new ImageIcon("C:\\Users\\Webkanin\\IdeaProjects\\HiN\\src\\programmering1\\kode\\oblig5\\oppg12_7\\x.gif");
+    private ImageIcon not = new ImageIcon("C:\\Users\\Webkanin\\IdeaProjects\\HiN\\src\\programmering1\\kode\\oblig5\\oppg12_7\\o.gif");
 
     public Tic_tac_toe() {
         setLayout(new GridLayout(3, 3));
