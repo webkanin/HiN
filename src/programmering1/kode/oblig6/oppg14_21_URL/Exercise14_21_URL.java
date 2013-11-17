@@ -3,11 +3,10 @@ package programmering1.kode.oblig6.oppg14_21_URL;
 import java.io.*;
 import java.net.*;
 import javax.swing.*;
-import javax.swing.filechooser.*;
 import java.awt.*;
 
 
-public class Exersice14_21_URL
+public class Exercise14_21_URL
 {
     static JFrame frame;
 
@@ -111,7 +110,7 @@ public class Exersice14_21_URL
 
     public static void main(String[] args)
     {
-        Exersice14_21_URL obj = new Exersice14_21_URL();
+        Exercise14_21_URL obj = new Exercise14_21_URL();
         obj.Run();
 
     }

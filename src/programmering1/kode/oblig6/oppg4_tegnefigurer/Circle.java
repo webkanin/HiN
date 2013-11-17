@@ -1,7 +1,8 @@
-package programmering1.kode.oblig6.oppg4_tegneprog;
+package programmering1.kode.oblig6.oppg4_tegnefigurer;
+
 import java.awt.Color;
 import java.awt.Graphics;
-
+import java.util.Random;
 
 public class Circle extends Figure {
 	int radius;
@@ -20,5 +21,12 @@ public class Circle extends Figure {
 	}
     
     // add set/get methods if nessecery
+	public Figure clone()
+	{
+		Random rand = new Random();
+		int y = 120+rand.nextInt(400);
+		int x = 120+rand.nextInt(400);
+		return new Circle(filled, color, x, y, radius);
+	}
 
 }
