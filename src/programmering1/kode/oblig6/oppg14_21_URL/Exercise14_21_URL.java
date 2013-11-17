@@ -5,6 +5,12 @@ import java.net.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Created with IntelliJ IDEA.
+ * User: Marko
+ * Date: 15.11.13
+ * Time: 21:05
+ */
 
 public class Exercise14_21_URL
 {
@@ -97,7 +103,7 @@ public class Exercise14_21_URL
 
         if (points!=null)
         {
-            frame = new JFrame("Exersice14_21");
+            frame = new JFrame("Exercise14_21");
             frame.setVisible(true);
             frame.setSize(200,220);
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

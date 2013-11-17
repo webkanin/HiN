@@ -1,5 +1,11 @@
 package programmering1.kode.oblig6.oppg4_tegnefigurer;
-import com.sun.xml.internal.bind.v2.TODO;
+
+/**
+ * Created with IntelliJ IDEA.
+ * User: Marko
+ * Date: 14.11.13
+ * Time: 20:05
+ */
 
 import javax.swing.*;
 import java.awt.*;
@@ -26,25 +32,25 @@ public class DrawFigures extends JFrame {
 
 	Random rand = new Random();
 
-	private ArrayList<Figure> theFigures = new ArrayList<Figure>(); // holds the figures that are being created
-	Color currentColor = Color.BLUE; // holds current color
+	private ArrayList<Figure> theFigures = new ArrayList<Figure>();
+	Color currentColor = Color.BLUE;
 
 	public DrawFigures() {
-		buttonPanel = new JPanel(); // panel that holds the buttons in the bottom of the window
+		buttonPanel = new JPanel();
 		colorPanel = new JPanel();
 
 
-		// TODO: create a panel that holds color pick buttons
 
-		drawPanel = new DrawPanel(); // in this panel figures are drawn
-		jbtCircle = new JButton("Circle");
-		jbtRectangle = new JButton("Rectangle");
-		jbtTriangle = new JButton("Triangle");
-		jbtFilledCircle = new JButton("Filled Circle");
-		jbtFilledRectangle = new JButton("Filled Rectangle");
-		jbtFilledTriangle = new JButton("Filled Triangle");
-		jbtClone = new JButton("Copy Last");
-		jbtRemove = new JButton("Remove one");
+
+		drawPanel = new DrawPanel();
+		jbtCircle = new JButton("Sirkel");
+		jbtRectangle = new JButton("Rektangel");
+		jbtTriangle = new JButton("Triangel");
+		jbtFilledCircle = new JButton("Fylt Sirkel");
+		jbtFilledRectangle = new JButton("Fylt Rektangel");
+		jbtFilledTriangle = new JButton("Fylt Triangel");
+		jbtClone = new JButton("Kopier Siste");
+		jbtRemove = new JButton("Fjern En");
 
 		jbtGreen= new JButton("Green");
 		jbtBlue = new JButton("Blue");
@@ -73,9 +79,9 @@ public class DrawFigures extends JFrame {
 
 		add(colorPanel, BorderLayout.NORTH);
 
-		add(drawPanel, BorderLayout.CENTER); // add drawing panel to the center of the frame
+		add(drawPanel, BorderLayout.CENTER);
 
-		add(buttonPanel, BorderLayout.SOUTH); // adds button to the bottom of the frame
+		add(buttonPanel, BorderLayout.SOUTH);
 
 		// actionlisteners
 		ButtonsListener bl = new ButtonsListener();
@@ -88,7 +94,6 @@ public class DrawFigures extends JFrame {
 
 		jbtClone.addActionListener(bl);
 		jbtRemove.addActionListener(bl);
-		// connects rest of the buttons to the action listener
 
 
 		ColorButtonsListener cbl = new ColorButtonsListener();
@@ -97,21 +102,21 @@ public class DrawFigures extends JFrame {
 		jbtBlue.addActionListener(cbl);
 		jbtRed.addActionListener(cbl);
 
-	       //TODO: add color pick buttons, place them to the north of the frame,  add actionlistener that is already implemented bellow
+
 
 	}
 
 	/** Main method */
 	public static void main(String[] args) {
 		JFrame frame = new DrawFigures();
-		frame.setTitle("Program that creates figures");
+		frame.setTitle("Program som lager figurer");
 		frame.setLocationRelativeTo(null); // Center the frame
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setSize(1000, 600);
 		frame.setVisible(true);
 	}
 
-    //Class that includes a method to listen for input on the buttons in the lower side of the panel.
+
 
 	class ButtonsListener implements ActionListener {
 
@@ -125,25 +130,25 @@ public class DrawFigures extends JFrame {
 
 			//System.out.println(kommando);
 
-			if (kommando.equals("Circle")) {
+			if (kommando.equals("Sirkel")) {
 				theFigures.add(new Circle(false, currentColor, 20, 20, 50));
-			} else if (kommando.equals("Filled Circle")) {
+			} else if (kommando.equals("Fylt Sirkel")) {
 				theFigures.add(new Circle(true, currentColor, 80, 20, 50));
-			} else if (kommando.equals("Rectangle")) {
-				theFigures.add(new Rectangle(false, currentColor, 30, 30, 95, 95));
-			} else if (kommando.equals("Filled Rectangle")) {
-				theFigures.add(new Rectangle(true, currentColor, 101, 30, 90, 90));
-			} else if (kommando.equals("Triangle")) {
-				theFigures.add(new Triangle(false, currentColor, 50, 150, 80, 70));
-			} else if (kommando.equals("Filled Triangle")) {
-				theFigures.add(new Triangle(true, currentColor, 66, 166, 95, 83));
-			} else if (kommando.equals("Copy Last")) {
+			} else if (kommando.equals("Rektangel")) {
+				theFigures.add(new Rectangle(false, currentColor, 310, 30, 95, 95));
+			} else if (kommando.equals("Fylt Rektangel")) {
+				theFigures.add(new Rectangle(true, currentColor, 400, 30, 90, 90));
+			} else if (kommando.equals("Triangel")) {
+				theFigures.add(new Triangle(false, currentColor, 50, 190, 80, 70));
+			} else if (kommando.equals("Fylt Triangel")) {
+				theFigures.add(new Triangle(true, currentColor, 66, 250, 95, 83));
+			} else if (kommando.equals("Kopier Siste")) {
 				if (theFigures.size()>0)
 				{
 
 					theFigures.add(theFigures.get(theFigures.size()-1).clone());
 				}
-			} else if (kommando.equals("Remove one")) {
+			} else if (kommando.equals("Fjern En")) {
 				if (theFigures.size()>0)
 				{
 			                int index = rand.nextInt(theFigures.size());
@@ -174,14 +179,14 @@ public class DrawFigures extends JFrame {
 	class DrawPanel extends JPanel {
 
 		@Override
-		// don't call this method directly (repaint will call it indirectly..)
+
 		protected void paintComponent(Graphics g) {
 			super.paintComponent(g);
 			for (Figure f : theFigures)
 				f.drawMySelf(g);
 
 			g.setColor(Color.BLACK);
-			g.drawString("Figures Count = "+theFigures.size(), 20, 450);
+			g.drawString("Antall figurer = "+theFigures.size(), 20, 450);
 		}
 	}
 }

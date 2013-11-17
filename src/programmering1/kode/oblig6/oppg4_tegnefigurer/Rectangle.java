@@ -21,7 +21,7 @@ public class Rectangle extends Figure {
 			g.drawRect(xPos, yPos, width, height);
 	}
     
-    // add set/get methods if nessecery
+
 	public Figure clone()
 	{
 		Random rand = new Random();

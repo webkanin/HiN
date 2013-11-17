@@ -4,6 +4,12 @@ import java.io.*;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * Created with IntelliJ IDEA.
+ * User: Marko
+ * Date: 17.11.13
+ * Time: 22:30
+ */
 
 public class Exercise14_21
 {	

@@ -32,7 +32,7 @@ public class Triangle extends Figure {
 			g.drawPolygon(xx, yy, 3);
 	}
     
-    // add set/get methods if nessecery
+
 	public Figure clone()
 	{
 		Random rand = new Random();

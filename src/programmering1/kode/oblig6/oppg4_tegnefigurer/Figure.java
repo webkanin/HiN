@@ -20,10 +20,10 @@ public abstract class Figure {
 		return null;
 	}
 
-    //metode that should be implemented into child classes
+
 
 	public void drawMySelf(Graphics g){};
 	
-	///set/get methods if nessecery
+
 
 }
