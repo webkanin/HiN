@@ -1,4 +1,7 @@
 package programmering1.kode.oblig4.oppg1_11_1;
+
+import java.util.Arrays;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Marko
@@ -12,10 +15,19 @@ private double side1 = 1.0, side2 = 1.0, side3 = 1.0;
 	public Triangle() {
 		
 	}
-	public Triangle(double side1, double side2, double side3) {
+	public Triangle(double side1, double side2, double side3) throws IllegalTriangleException{
 		this.side1 = side1;
 		this.side2 = side2;
 		this.side3 = side3;
+
+        double[] sides = new double[]{side1,side2,side3};
+        Arrays.sort(sides);
+
+        if (sides[0]+sides[1]<sides[2]) throw new IllegalTriangleException();
+
+
+
+
 	}
 	
 	public double getSide1() {
