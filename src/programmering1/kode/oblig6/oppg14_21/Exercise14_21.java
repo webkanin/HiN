@@ -30,7 +30,7 @@ public class Exercise14_21
 	        public void paintComponent(Graphics g) {
         	    super.paintComponent(g);
 	
-        	    //g.drawString("BLAH", 20, 20);
+        	    //g.drawString(, 20, 20);
 	            //g.drawRect(10, 10, 20, 20);
 		   	for(int i=0; i<points.length; i++)
 			{

@@ -22,7 +22,7 @@ public class Exercise14_21_URL
         MyPoint[] points;
 
         GraphPanel(MyPoint[] points) {
-            // set a preferred size for the custom panel.
+
             this.points = points;
             setPreferredSize(new Dimension(250,250));
         }
@@ -31,8 +31,7 @@ public class Exercise14_21_URL
         public void paintComponent(Graphics g) {
             super.paintComponent(g);
 
-            //g.drawString("BLAH", 20, 20);
-            //g.drawRect(10, 10, 20, 20);
+
             for(int i=0; i<points.length; i++)
             {
                 g.fillOval(points[i].x, points[i].y, 13, 13);

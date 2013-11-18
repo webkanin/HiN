@@ -20,7 +20,7 @@ public class Circle extends Figure {
 			g.drawOval(xPos, yPos, 2*radius, 2*radius);
 	}
     
-    // add set/get methods if nessecery
+
 	public Figure clone()
 	{
 		Random rand = new Random();

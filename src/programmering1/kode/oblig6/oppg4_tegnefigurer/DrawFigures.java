@@ -1,4 +1,9 @@
 package programmering1.kode.oblig6.oppg4_tegnefigurer;
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.Random;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -7,11 +12,7 @@ package programmering1.kode.oblig6.oppg4_tegnefigurer;
  * Time: 20:05
  */
 
-import javax.swing.*;
-import java.awt.*;
-import java.awt.event.*;
-import java.util.Random;
-import java.util.ArrayList;
+
 
 public class DrawFigures extends JFrame {
 	private JButton jbtCircle;
