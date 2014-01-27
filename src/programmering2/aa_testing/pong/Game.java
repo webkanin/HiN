@@ -13,6 +13,7 @@ public class Game extends Canvas implements Runnable {
     private static final long serialVersionUIS = 1L;
 
 
+    public static PlayerPaddle player;
 
     JFrame frame;         //Windows of the game
     public final int WIDTH = 400;       //Width of window
@@ -60,6 +61,8 @@ public class Game extends Canvas implements Runnable {
         frame.setTitle(TITLE);
         frame.setLocationRelativeTo(null);  //sets the location of the frame realive to nothing (centers it on the screen)
 
+        player = new PlayerPaddle(10, 60);
+        player = new PlayerPaddle(50, 120);
 
     }
 
@@ -70,7 +73,7 @@ public class Game extends Canvas implements Runnable {
     }
 
     public void tick(){
-
+       player.tick(this);  //this because this referes to "this class".
     }
 
     public void render(){
