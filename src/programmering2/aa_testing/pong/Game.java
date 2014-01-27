@@ -14,6 +14,9 @@ public class Game extends Canvas implements Runnable {
 
 
     public static PlayerPaddle player;
+    public static Ball ball;
+
+    InputHandler IH;
 
     JFrame frame;         //Windows of the game
     public final int WIDTH = 400;       //Width of window
@@ -21,9 +24,15 @@ public class Game extends Canvas implements Runnable {
     public final Dimension gameSize = new Dimension(WIDTH, HEIGHT);    //Condense WIDTH & HEIGHT into 1 variablo e
     public final String TITLE = "Pong InDev";
 
+
     BufferedImage image = new BufferedImage(WIDTH, HEIGHT, BufferedImage.TYPE_INT_BGR);
 
     boolean gameRunning = false;      //whether the game is running
+
+    int timeScore;
+    int ballsLeft = 5;
+
+    Thread thread;
 
     public void run(){
 
@@ -31,13 +40,20 @@ public class Game extends Canvas implements Runnable {
             tick();
             render();
 
+            try{
+                Thread.sleep(7);   //7 ms between each execution of the program. (Makes the racket slower)
+            }   catch (Exception e){
+                e.printStackTrace();
+            }
+
         }
 
     }
 
     public synchronized void start(){
         gameRunning = true;
-        new Thread(this).start();
+        thread = new Thread(this);
+        thread.start();
     }
 
     public synchronized void stop(){
@@ -61,8 +77,14 @@ public class Game extends Canvas implements Runnable {
         frame.setTitle(TITLE);
         frame.setLocationRelativeTo(null);  //sets the location of the frame realive to nothing (centers it on the screen)
 
-        player = new PlayerPaddle(10, 60);
-        player = new PlayerPaddle(50, 120);
+
+
+        IH = new InputHandler(this);
+        //frame.addKeyListener(IH);
+
+        player = new PlayerPaddle(380, 60);
+        ball = new Ball(getWidth() / 2, getHeight() / 2);
+
 
     }
 
@@ -74,6 +96,7 @@ public class Game extends Canvas implements Runnable {
 
     public void tick(){
        player.tick(this);  //this because this referes to "this class".
+        ball.tick(this);
     }
 
     public void render(){
@@ -88,8 +111,16 @@ public class Game extends Canvas implements Runnable {
 
 
         g.drawImage(image, 0, 0, getWidth(), getHeight(), null);
-        g.setColor(Color.RED);
-        g.fillRect(0, 0, getWidth(), getHeight());
+
+        g.setColor(Color.WHITE);
+        g.drawString("Best Time: " + timeScore, 50, 200);
+        g.drawString("Balls left: " + ballsLeft, 300, 200);
+
+        player.render(g);
+        ball.render(g);
+
+       // g.setColor(Color.BLACK);
+        //g.fillRect(0, 0, getWidth(), getHeight());
 
         g.dispose();
         bs.show();

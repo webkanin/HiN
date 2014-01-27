@@ -12,6 +12,10 @@ import java.awt.event.MouseListener;
  */
 public class InputHandler implements KeyListener{
 
+    public InputHandler (Game game){
+        game.addKeyListener(this);
+    }
+
 
 
     public void keyPressed(KeyEvent e) {
