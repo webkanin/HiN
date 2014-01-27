@@ -10,7 +10,6 @@ import javax.swing.JFrame;
  * Student nr. 530 614
  */
 public class Game extends Canvas implements Runnable {
-    private static final long serialVersionUIS = 1L;
 
 
     public static PlayerPaddle player;

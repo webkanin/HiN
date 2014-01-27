@@ -10,6 +10,8 @@ import java.awt.event.MouseListener;
  * User: Marko Sundic
  * Student nr. 530 614
  */
+
+
 public class InputHandler implements KeyListener{
 
     public InputHandler (Game game){
@@ -40,6 +42,9 @@ public class InputHandler implements KeyListener{
 
 
     public void keyReleased(KeyEvent e) {
+
+            Game.player.goingUp = false;
+            Game.player.goingDown = false;
 
     }
 }

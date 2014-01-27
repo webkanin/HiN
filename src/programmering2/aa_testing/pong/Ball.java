@@ -4,9 +4,8 @@ import java.awt.*;
 
 /**
  * Created with IntelliJ IDEA.
- * User: Marko
- * Date: 27.01.14
- * Time: 22:48
+ * User: Marko Sundic
+ * Student nr. 530 614
  */
 public class Ball {
 
@@ -57,6 +56,7 @@ public class Ball {
         if(boundingBox.intersects(game.player.boundingBox)){
             vx = -speed;
             speed = (speed + 1);
+
         }
     }
 
