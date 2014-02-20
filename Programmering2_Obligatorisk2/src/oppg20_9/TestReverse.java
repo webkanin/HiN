@@ -1,18 +1,18 @@
 package oppg20_9;
-
+import java.io.*;
 /**
  * Created with IntelliJ IDEA.
  * User: Marko Sundic
  * Student nr. 530 614
  */
-import java.io.*;
+
 
 
 public class TestReverse
 {
     public static void main(String[] args) throws IOException
     {
-        System.out.println("Enter a set of characters to be reversed");
+        System.out.println("Enter a set of characters to be reversed: ");
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String inData;
         inData = br.readLine();

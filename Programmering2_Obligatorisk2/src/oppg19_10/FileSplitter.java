@@ -1,12 +1,12 @@
 package oppg19_10;
-
+import java.io.*;
+import java.util.*;
 /**
  * Created with IntelliJ IDEA.
  * User: Marko Sundic
  * Student nr. 530 614
  */
-import java.io.*;
-import java.util.*;
+
 
 public class FileSplitter {
 
